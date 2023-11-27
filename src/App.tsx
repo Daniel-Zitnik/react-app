@@ -1,6 +1,12 @@
+// react
 import React from 'react';
-import './assets/App.scss';
 import { Route, NavLink, Routes } from 'react-router-dom';
+// assets
+import './assets/App.scss';
+// pages
+import Home from './pages/Home';
+import Tunes from './pages/Tunes';
+import About from './pages/About';
 
 function App() {
   return (
@@ -13,9 +19,9 @@ function App() {
 
       <main>
         <Routes>
-          <Route path='/' />
-          <Route path='/tunes' />
-          <Route path='/about' />
+          <Route path='/' Component={Home}/>
+          <Route path='/tunes' Component={Tunes}/>
+          <Route path='/about' Component={About}/>
         </Routes>
       </main>
 
