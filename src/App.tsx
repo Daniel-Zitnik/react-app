@@ -2,7 +2,8 @@
 import React from 'react';
 import { Route, NavLink, Routes } from 'react-router-dom';
 // assets
-import './assets/App.scss';
+import './styles/App.scss';
+import './styles/Navigation.scss';
 // pages
 import Home from './pages/Home';
 import Tunes from './pages/Tunes';
