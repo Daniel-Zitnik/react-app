@@ -1,7 +1,10 @@
 // react
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import React, { useState } from 'react';
 // styles
 import styles from '../styles/Tunes.module.scss';
+// components
+import TunesSearch from "../components/TunesSearch";
+import TunesList from "../components/TunesList";
 
 type Props = {}
 
@@ -14,19 +17,17 @@ const Tunes = (props: Props) => {
         {id: 3, artist: 'three', name: 'three song'}
     ])
 
-    // input change
-    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-        setSearchQuery( e.target.value );
+    // callback input change
+    const handleInputChange = (data: string) => {
+        setSearchQuery(data);
     }
 
-    // form submit
-    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-
+    // callback form submit
+    const handleSearchFormSubmit = (data: string) => {
         const newSong = {
             id: Math.max (...songs.map (s => s.id)) + 1,
-            artist: searchQuery,
-            name: searchQuery + ' song'
+            artist: data,
+            name: data + ' song'
         }
 
         setSongs([...songs, newSong]);
@@ -36,16 +37,12 @@ const Tunes = (props: Props) => {
     return (
         <>
         <h1>tunes</h1>
-
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={searchQuery} onChange={handleInputChange} />
-        </form>
-
-        <ul>
-            {songs.map( song => (
-                <li key={song.id}>{ song.artist + ' - ' + song.name }</li>
-            ))}
-        </ul>
+        <TunesSearch 
+            onSearchFormSubmit={handleSearchFormSubmit} 
+            onInputChange={handleInputChange} 
+            searchQuery={searchQuery}
+        />
+        <TunesList songs={ songs }/>
         </>
     )
 }
