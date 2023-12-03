@@ -1,11 +1,13 @@
 // react
 import React, { useState } from 'react'
+// interface
+import { Song } from '../types/index'
 // styles
 import styles from '../styles/Tunes.module.scss';
 
 
 type Props = {
-    songs: {id: number, artist: string, name: string}[]
+    songs: Song[]
 }
 
 const TunesList = (props: Props) => {
