@@ -1,5 +1,6 @@
 // react
 import React, { useState } from 'react';
+import axios from 'axios';
 // styles
 import styles from '../styles/Tunes.module.scss';
 // components
@@ -13,7 +14,7 @@ const Tunes = (props: Props) => {
     const [songs, setSongs] = useState([])
 
     // callback form submit
-    const handleSearchFormSubmit = (data: string) => {
+    const handleSearchSubmit = (data: string) => {
         setSongs([]);
     }
 
@@ -22,7 +23,7 @@ const Tunes = (props: Props) => {
         <>
         <h1>tunes</h1>
         <TunesSearch 
-            onSearchFormSubmit={handleSearchFormSubmit} 
+            onSearchSubmit={handleSearchSubmit} 
         />
         <TunesList songs={ songs }/>
         </>

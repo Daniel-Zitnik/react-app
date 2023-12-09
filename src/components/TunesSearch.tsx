@@ -1,10 +1,11 @@
 // react
 import React, { useRef, ChangeEvent, FormEvent } from 'react'
+import { debounce } from 'lodash-es'
 // styles
 import styles from '../styles/Tunes.module.scss';
 
 type Props = {
-    onSearchFormSubmit: (data: string) => void
+    onSearchSubmit: (data: string) => void
 }
 
 const TunesSearch = (props: Props) => {
@@ -12,9 +13,9 @@ const TunesSearch = (props: Props) => {
     const searchInput = useRef<HTMLInputElement>(null)
 
     // input change
-    const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const handleInputChange = debounce ((e: ChangeEvent<HTMLInputElement>) => {
         searchMusic();
-    }
+    }, 500)
 
     // form submit
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
