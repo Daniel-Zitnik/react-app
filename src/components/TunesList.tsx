@@ -1,5 +1,5 @@
 // react
-import React, { useState } from 'react'
+import React from 'react'
 // interface
 import { Song } from '../types/index'
 // styles
@@ -18,7 +18,7 @@ const TunesList = (props: Props) => {
     return (
         <ul>
             {songs.map( (song) => (
-                <li key={song.id}>{ song.artist + ' - ' + song.name }</li>
+                <li key={song.id}>{ song.artist + ' - ' + song.title }</li>
             ))}
         </ul>
     )

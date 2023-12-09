@@ -15,7 +15,7 @@ const TunesSearch = (props: Props) => {
     // input change
     const handleInputChange = debounce ((e: ChangeEvent<HTMLInputElement>) => {
         searchMusic();
-    }, 500)
+    }, 750)
 
     // form submit
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -25,7 +25,8 @@ const TunesSearch = (props: Props) => {
 
     // search music
     const searchMusic = () => {
-        console.log(searchInput.current?.value);
+        const searchString = searchInput.current?.value;
+        searchString && props.onSearchSubmit (searchString);
     }
 
     // template
