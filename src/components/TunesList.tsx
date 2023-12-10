@@ -4,6 +4,8 @@ import React from 'react'
 import { Song } from '../types/index'
 // styles
 import styles from '../styles/Tunes.module.scss';
+// components
+import TunesSong from './TunesSong';
 
 
 type Props = {
@@ -16,11 +18,11 @@ const TunesList = (props: Props) => {
 
     // template
     return (
-        <ul>
+        <section>
             {songs.map( (song) => (
-                <li key={song.id}>{ song.artist + ' - ' + song.title }</li>
+                <TunesSong song={ song } />
             ))}
-        </ul>
+        </section>
     )
 }
 

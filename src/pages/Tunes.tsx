@@ -20,7 +20,7 @@ const Tunes = (props: Props) => {
         axios.get(
             `https://itunes.apple.com/search?term=${encodeURI(data)}&entity=musicTrack&limit=5` 
         ).then(response => {
-            const iTunesSongs = response.data.results
+            let iTunesSongs = response.data.results
                 .filter( (song: SongFromITunes) => song.kind === 'song' )
                 .map( (song: SongFromITunes) => extractData(song) )
             setSongs(iTunesSongs);
