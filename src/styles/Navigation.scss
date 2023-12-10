@@ -1,3 +1,23 @@
-nav a {
-    color: crimson;
+@import 'variables';
+
+nav {
+    margin-top: 25px;
+
+    a {
+        color: $green;
+        text-decoration: none;
+        margin: 0 12px;
+        padding: 7px 0;
+        font-size: 24px;
+        display: block;
+        text-align: center;
+        width: 226px;
+        font-weight: bold;
+    }
+
+    .active {
+        background: $green;
+        color: $dark-gray;
+        border-radius: 5px;
+    }
 }

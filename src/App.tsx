@@ -2,7 +2,7 @@
 import React from 'react';
 import { Route, NavLink, Routes } from 'react-router-dom';
 // assets
-import './styles/App.scss';
+import './styles/main.scss';
 import './styles/Navigation.scss';
 // pages
 import Home from './pages/Home';
@@ -12,7 +12,7 @@ import About from './pages/About';
 function App() {
     return (
         <div className="App">
-            <header>
+            <header style={{ height: `calc( 100vh - 24px )` }}>
                 <nav>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/tunes">Tunes</NavLink>
@@ -20,7 +20,7 @@ function App() {
                 </nav>
             </header>
 
-            <main>
+            <main style={{ height: `calc( 100vh - 24px )` }}>
                 <Routes>
                     <Route path='/' Component={Home} />
                     <Route path='/tunes' Component={Tunes} />

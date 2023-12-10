@@ -35,11 +35,11 @@ const Tunes = (props: Props) => {
     // template
     return (
         <>
-        <h1>tunes</h1>
-        <TunesSearch 
-            onSearchSubmit={handleSearchSubmit} 
-        />
-        <TunesList songs={ songs }/>
+            <h1>tunes</h1>
+            <TunesSearch 
+                onSearchSubmit={handleSearchSubmit} 
+            />
+            <TunesList songs={ songs }/>
         </>
     )
 }
