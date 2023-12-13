@@ -15,6 +15,15 @@ nav {
         font-weight: bold;
     }
 
+    a:hover {
+        color: $light-green;
+    }
+
+    .active:hover {
+        color: $dark-gray;
+        background: $light-green;
+    }
+
     .active {
         background: $green;
         color: $dark-gray;
