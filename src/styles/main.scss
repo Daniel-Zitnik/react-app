@@ -5,6 +5,12 @@ body {
     color: $green;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+p {
+    color: $white;
 }
 
 .App {
@@ -26,4 +32,5 @@ main {
     border-radius: 10px;
     display: flex;
     margin-left: 12px;
+    flex-direction: column;
 }

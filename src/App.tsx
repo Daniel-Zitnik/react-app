@@ -12,7 +12,7 @@ import About from './pages/About';
 function App() {
     return (
         <div className="App">
-            <header style={{ height: `calc( 100vh - 24px )` }}>
+            <header style={{ minHeight: `calc( 100vh - 24px )` }}>
                 <nav>
                     <NavLink to="/">Home</NavLink>
                     <NavLink to="/tunes">Tunes</NavLink>
@@ -20,7 +20,7 @@ function App() {
                 </nav>
             </header>
 
-            <main style={{ height: `calc( 100vh - 24px )` }}>
+            <main style={{ minHeight: `calc( 100vh - 24px )` }}>
                 <Routes>
                     <Route path='/' Component={Home} />
                     <Route path='/tunes' Component={Tunes} />
