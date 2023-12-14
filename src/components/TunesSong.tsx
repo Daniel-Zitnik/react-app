@@ -22,7 +22,7 @@ const TunesSong = (props: Props) => {
 
     // template
     return (
-        <article key={ song.id }>
+        <article key={ song.id } className='tunes-song'>
             <div>
                 <h2>{ songify(song) }</h2>
                 <div className="player">

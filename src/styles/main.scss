@@ -9,6 +9,12 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    margin: 20px;
+    display: block;
+    width: 100%;
+}
+
 p {
     color: $white;
 }
@@ -32,5 +38,4 @@ main {
     border-radius: 10px;
     display: flex;
     margin-left: 12px;
-    flex-direction: column;
 }

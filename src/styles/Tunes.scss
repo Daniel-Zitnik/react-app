@@ -1,0 +1,61 @@
+@import 'variables';
+
+.tunes {
+    // page
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        font-size: 32px;
+        margin: 20px 0;
+    }
+
+    input {
+        background-color: $light-gray;
+        padding: 10px 20px 10px 40px;
+        font-size: 20px;
+        border-radius: 100px;
+        border: 2px solid $dark-gray;
+        outline: none;
+        color: $white;
+        background-image: url('../assets/search.png');
+        background-position: 14px 14px;
+        background-size: 15px;
+        background-repeat: no-repeat;
+    }
+
+    ::placeholder {
+        color: #bfbfbf;
+    }
+
+    input:hover {
+        background-color: $focus-gray;
+        border-color: #393939;
+    }
+
+    input:focus {
+        border-color: $white;
+    }
+
+    .tunes-list {
+        display: flex;
+        align-content: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .tunes-song {
+        display: flex;
+        background-color: $gray;
+        border-radius: 8px;
+        padding: 12px;
+        width: calc(50% - 30px);
+        height: calc(33.33% - 32px);
+    }
+
+    .tunes-song:hover {
+        background-color: $light-gray;
+    }
+}
+

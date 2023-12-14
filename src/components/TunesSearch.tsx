@@ -33,7 +33,7 @@ const TunesSearch = (props: Props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" ref={searchInput} autoFocus onChange={handleInputChange}  />
+                <input type="text" ref={searchInput} autoFocus onChange={handleInputChange} placeholder='search song...' />
             </form>
         </div>
     )

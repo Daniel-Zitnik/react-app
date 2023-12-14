@@ -18,7 +18,7 @@ const TunesList = (props: Props) => {
 
     // template
     return (
-        <section>
+        <section className='tunes-list'>
             {songs.map( (song) => (
                 <TunesSong song={ song } />
             ))}

@@ -1,12 +1,12 @@
 import React from 'react'
 // styles
-import styles from '../styles/About.module.scss'
+import '../styles/About.scss'
 
 type Props = {}
 
 const About = (props: Props) => {
     return (
-        <div className={styles.container}>
+        <div className='container about'>
             <h1>Programming in React</h1>
             <p>In the fast-evolving landscape of web development, React has emerged as a revolutionary force, transforming the way developers approach the creation of dynamic and interactive web pages. This essay explores the fundamental concepts and principles behind programming web pages in React, delving into its component-based architecture, JSX syntax, state management, and the overall impact on modern web development.</p>
             

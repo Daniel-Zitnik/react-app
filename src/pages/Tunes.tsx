@@ -2,12 +2,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 // interface
-import { Song, SongFromITunes } from '../types/index'
-// styles
-import styles from '../styles/Tunes.module.scss';
+import { Song, SongFromITunes } from '../types/index';
 // components
 import TunesSearch from "../components/TunesSearch";
 import TunesList from "../components/TunesList";
+// styles
+import '../styles/Tunes.scss';
 
 type Props = {}
 
@@ -18,7 +18,7 @@ const Tunes = (props: Props) => {
     // callback form submit
     const handleSearchSubmit = (data: string) => {
         axios.get(
-            `https://itunes.apple.com/search?term=${encodeURI(data)}&entity=musicTrack&limit=5` 
+            `https://itunes.apple.com/search?term=${encodeURI(data)}&entity=musicTrack&limit=6` 
         ).then(response => {
             let iTunesSongs = response.data.results
                 .filter( (song: SongFromITunes) => song.kind === 'song' )
@@ -34,13 +34,13 @@ const Tunes = (props: Props) => {
 
     // template
     return (
-        <>
-            <h1>tunes</h1>
+        <div className='container tunes'>
             <TunesSearch 
                 onSearchSubmit={handleSearchSubmit} 
             />
+            {songs.length > 0 && <h1>Results</h1>}
             <TunesList songs={ songs }/>
-        </>
+        </div>
     )
 }
 
