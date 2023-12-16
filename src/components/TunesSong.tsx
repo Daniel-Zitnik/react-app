@@ -16,22 +16,23 @@ const TunesSong = (props: Props) => {
     // adjust song title
     const songify = (song: Song) => {
         let { title, artist } = song;
-        title = truncate(title, { length: 75 });
-        return song.title + ' - ' + song.artist;
+        title = truncate(title, { length: 50 });
+        artist = truncate(artist, { length: 50 });
+        return title + ' - ' + artist;
     }
 
     // template
     return (
         <article key={ song.id } className='tunes-song'>
-            <div>
+            <div className='song-info'>
                 <h2>{ songify(song) }</h2>
-                <div className="player">
-                    { song.artwork && <img src={ song.artwork } alt="song art" /> }
-                    <audio controls src={ song.audioFile } />
-                </div>
+                <p>{ truncate(song.album, { length: 100 }) }</p>
             </div>
 
-            <footer>{ truncate(song.album, { length: 100 }) }</footer>
+            <div className="player">
+                { song.artwork && <img src={ song.artwork } alt="song art" /> }
+                <audio controls src={ song.audioFile } />
+            </div>
         </article>
     )
 }

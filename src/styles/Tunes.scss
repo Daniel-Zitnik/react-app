@@ -52,6 +52,39 @@
         padding: 12px;
         width: calc(50% - 30px);
         height: calc(33.33% - 32px);
+        flex-direction: column;
+
+        .song-info {
+            width: 100%;
+            height: calc(100% - 100px);
+            text-align: center;
+        }
+
+        .player {
+            width: 100%;
+            align-items: center;
+            display: flex;
+        }
+
+        img {
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        audio {
+            width: calc(100% - 100px);
+            margin-left: 10px;
+        }
     }
 
     .tunes-song:hover {
