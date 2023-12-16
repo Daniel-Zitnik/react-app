@@ -13,17 +13,21 @@ type Props = {}
 
 const Tunes = (props: Props) => {
     // state
-    const [songs, setSongs] = useState([])
+    const [songs, setSongs] = useState([]);
+    const [songsFinded, setSongsFinded] = useState(true);
 
     // callback form submit
     const handleSearchSubmit = (data: string) => {
         axios.get(
             `https://itunes.apple.com/search?term=${encodeURI(data)}&entity=musicTrack&limit=6` 
         ).then(response => {
+            //console.log(response.data.results);
+            
             let iTunesSongs = response.data.results
                 .filter( (song: SongFromITunes) => song.kind === 'song' )
                 .map( (song: SongFromITunes) => extractData(song) )
             setSongs(iTunesSongs);
+             setSongsFinded(iTunesSongs.length > 0 ? true : false);
         })
     }
 
@@ -38,7 +42,7 @@ const Tunes = (props: Props) => {
             <TunesSearch 
                 onSearchSubmit={handleSearchSubmit} 
             />
-            {songs.length > 0 && <h1>Results</h1>}
+            {songsFinded == true ? (songs.length > 0 && <h1>Results</h1>) : <h1>No songs were found</h1>}
             <TunesList songs={ songs }/>
         </div>
     )

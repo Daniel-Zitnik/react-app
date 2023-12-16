@@ -1,8 +1,6 @@
 // react
 import React, { useRef, ChangeEvent, FormEvent } from 'react'
 import { debounce } from 'lodash-es'
-// styles
-import styles from '../styles/Tunes.module.scss';
 
 type Props = {
     onSearchSubmit: (data: string) => void

@@ -2,8 +2,6 @@
 import React from 'react'
 // interface
 import { Song } from '../types/index'
-// styles
-import styles from '../styles/Tunes.module.scss';
 // components
 import TunesSong from './TunesSong';
 

@@ -3,8 +3,6 @@ import React from 'react';
 import { truncate } from 'lodash-es';
 // interface
 import { Song } from '../types/index';
-// styles
-import styles from '../styles/Tunes.module.scss';
 
 type Props = {
     song: Song
