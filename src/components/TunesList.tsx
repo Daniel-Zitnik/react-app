@@ -18,7 +18,7 @@ const TunesList = (props: Props) => {
     return (
         <section className='tunes-list'>
             {songs.map( (song) => (
-                <TunesSong song={ song } />
+                <TunesSong song={ song } key={ song.id } />
             ))}
         </section>
     )

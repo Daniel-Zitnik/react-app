@@ -21,7 +21,7 @@ const TunesSong = (props: Props) => {
 
     // template
     return (
-        <article key={ song.id } className='tunes-song'>
+        <article className='tunes-song'>
             <div className='song-info'>
                 <h2>{ songify(song) }</h2>
                 <p>{ truncate(song.album, { length: 100 }) }</p>

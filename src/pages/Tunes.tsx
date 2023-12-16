@@ -21,18 +21,16 @@ const Tunes = (props: Props) => {
         axios.get(
             `https://itunes.apple.com/search?term=${encodeURI(data)}&entity=musicTrack&limit=6` 
         ).then(response => {
-            //console.log(response.data.results);
-            
             let iTunesSongs = response.data.results
                 .filter( (song: SongFromITunes) => song.kind === 'song' )
                 .map( (song: SongFromITunes) => extractData(song) )
             setSongs(iTunesSongs);
-             setSongsFinded(iTunesSongs.length > 0 ? true : false);
+            setSongsFinded(iTunesSongs.length > 0 ? true : false);
         })
     }
 
     // formats song data
-    const extractData = ({ trackID: id, trackName: title, artistName: artist, previewUrl: audioFile, artworkUrl100: artwork, collectionName: album }: SongFromITunes) => {
+    const extractData = ({ trackId: id, trackName: title, artistName: artist, previewUrl: audioFile, artworkUrl100: artwork, collectionName: album }: SongFromITunes) => {
         return { id, title, artist, audioFile, artwork, album } as Song
     }
 

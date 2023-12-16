@@ -8,7 +8,7 @@ export type Song = {
 }
 
 export type SongFromITunes = {
-    trackID: number, 
+    trackId: number, 
     trackName: string, 
     artistName: string, 
     previewUrl: string, 
