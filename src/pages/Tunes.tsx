@@ -28,8 +28,8 @@ const Tunes = (props: Props) => {
     }
 
     // formats song data
-    const extractData = ({ trackID: id, trackName: title, artistName: artist, previewUrl: audioFile, artWorkUrl100: artWork, collectionName: album }: SongFromITunes) => {
-        return { id, title, artist, audioFile, artWork, album } as Song
+    const extractData = ({ trackID: id, trackName: title, artistName: artist, previewUrl: audioFile, artworkUrl100: artwork, collectionName: album }: SongFromITunes) => {
+        return { id, title, artist, audioFile, artwork, album } as Song
     }
 
     // template

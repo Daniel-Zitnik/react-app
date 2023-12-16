@@ -26,7 +26,7 @@ const TunesSong = (props: Props) => {
             <div>
                 <h2>{ songify(song) }</h2>
                 <div className="player">
-                    { song.artWork && <img src={ song.artWork } alt="song art" /> }
+                    { song.artwork && <img src={ song.artwork } alt="song art" /> }
                     <audio controls src={ song.audioFile } />
                 </div>
             </div>

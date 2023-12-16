@@ -3,7 +3,7 @@ export type Song = {
     artist: string, 
     title: string,
     audioFile: string,
-    artWork: string,
+    artwork: string,
     album: string
 }
 
@@ -12,7 +12,7 @@ export type SongFromITunes = {
     trackName: string, 
     artistName: string, 
     previewUrl: string, 
-    artWorkUrl100: string, 
+    artworkUrl100: string, 
     collectionName: string,
     kind: string
 }
