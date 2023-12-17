@@ -50,3 +50,27 @@ a:focus,
 a:hover {
     color: $light-green;
 }
+
+::selection,
+input::selection {
+	background: $green;
+	color: $black;
+	text-shadow: none;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: $black;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #595959;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #888;
+}
