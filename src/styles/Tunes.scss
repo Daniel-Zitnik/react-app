@@ -87,6 +87,26 @@
         }
     }
 
+    @media screen and (min-width: 1700px) {
+        .tunes-song {
+            width: calc(33.33% - 32px);
+            height: calc(50% - 30px);
+            max-height: 300px;
+        }
+
+        .tunes-list {
+            max-height: 612px;
+            margin: auto 0;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        .tunes-song {
+            width: 100%;
+            height: 250px;
+        }
+    }
+
     .tunes-song:hover {
         background-color: $light-gray;
     }
