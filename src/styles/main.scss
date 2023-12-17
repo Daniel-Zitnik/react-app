@@ -39,3 +39,14 @@ main {
     display: flex;
     margin-left: 12px;
 }
+
+a {
+    color: $green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:focus,
+a:hover {
+    color: $light-green;
+}

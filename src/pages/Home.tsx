@@ -10,11 +10,11 @@ const Home = (props: Props) => {
 
     return (
         <div className='container home'>
-            <h1>Home</h1>
-            <img className="logo" src={logo} alt="react logo" onClick={() => {
+            <img className={ count > 0 ? "logo": ""} src={logo} alt="react logo" onClick={() => {
                 setCount (prev => prev + 1);
             }} />
-            <p>{count}</p>
+            {count > 0 ? <p>You've clicked the logo {count} times</p> : <p>Click the logo!</p>}
+            <a href="https://react.dev/">Learn react</a>
         </div>
      )
 }
