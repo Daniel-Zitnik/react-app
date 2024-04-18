@@ -4,7 +4,7 @@ nav {
     margin-top: 25px;
 
     a {
-        color: $green;
+        color: $primary-color;
         text-decoration: none;
         margin: 0 12px;
         padding: 7px 0;
@@ -13,20 +13,20 @@ nav {
         text-align: center;
         width: 226px;
         font-weight: bold;
-    }
 
-    a:hover {
-        color: $light-green;
-    }
-
-    .active:hover {
-        color: $dark-gray;
-        background: $light-green;
+        &:hover {
+            color: lighten($primary-color, 10);
+        }
     }
 
     .active {
-        background: $green;
+        background: $primary-color;
         color: $dark-gray;
         border-radius: 5px;
+
+        &:hover {
+            color: $dark-gray;
+            background: lighten($primary-color, 7);
+        }
     }
 }
